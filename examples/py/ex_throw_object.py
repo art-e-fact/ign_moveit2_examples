@@ -57,7 +57,7 @@ class MoveItThrowObject(Node):
         # Open gripper
         self._moveit2_gripper.open()
         self._moveit2_gripper.wait_until_executed()
-        self.get_logger().info("Pose A reached!")
+        self.get_logger().error("Pose A reached!")
 
         # Move above object
         position_above_object = deepcopy(throwing_object_pos)
@@ -74,7 +74,7 @@ class MoveItThrowObject(Node):
             quat_xyzw=default_quat,
         )
         self._moveit2.wait_until_executed()
-        self.get_logger().info("Pose B reached!")
+        self.get_logger().error("Pose B reached!")
 
         # Close gripper
         self._moveit2_gripper.close()
