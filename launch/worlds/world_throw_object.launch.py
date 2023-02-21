@@ -38,7 +38,7 @@ def generate_launch_description() -> LaunchDescription:
                     ]
                 )
             ),
-            launch_arguments=[("ign_args", [world, " -r -v ", ign_verbosity, "--headless-rendering"])],
+            launch_arguments=[("ign_args", [world, " -r -s -v ", ign_verbosity])],
         ),
     ]
 

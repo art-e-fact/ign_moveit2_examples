@@ -94,8 +94,8 @@ def generate_launch_description() -> LaunchDescription:
                 ("ros2_control_command_interface", "effort"),
                 # TODO: Re-enable colligion geometry for manipulator arm once spawning with specific joint configuration is enabled
                 ("collision_arm", "false"),
-                ("enable_rviz", "false"),
                 ("rviz_config", rviz_config),
+                ("enable_rviz", "false"), # TODO: Add enable_gui option
                 ("use_sim_time", use_sim_time),
                 ("log_level", log_level),
             ],
